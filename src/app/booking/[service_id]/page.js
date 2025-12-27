@@ -1,8 +1,10 @@
+
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 
-export default function BookingPage({ params }) {
+export default function BookingPage() {
+  const params = useParams();
   const [service, setService] = useState(null);
   const [durationType, setDurationType] = useState("hour");
   const [durationValue, setDurationValue] = useState(1);
